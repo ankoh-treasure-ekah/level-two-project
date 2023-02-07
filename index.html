@@ -4,68 +4,190 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/plugins.css">
     <link rel="shortcut icon" href="./assets/images/house-logo.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>House renting system</title>
 
 </head>
 <body>
-    <div class="body-container">
+    <div class="body-container">   
         <header class="header section-class">
             <nav class="nav-container">
                 <div class="header-logo">
-                    <a href="#">
+                    <a href="./index.html">
                         <img src="./assets/images/logo.png" alt="house logo">
                     </a>
                 </div>
-                <!-- <ul class="nav-items">
-                    <li class="nav-btn">
+                
+                <i class="fa-solid fa-bars hamburger"></i>
+                <ul class="nav-items">
+                    <i class="fa-solid fa-xmark"></i>
+                    <li class="nav nav-btn">
                         <a href="#">Home</a>
                     </li>
-                    <li class="nav-btn">
+                    <li class="nav nav-btn">
                         <a href="#">Booking</a>
                     </li>
-                    <li class="drop-container">
+                    <li class="nav drop-container">
                         <a class="nav-buttons Pages">
                             <span>Pages</span>
                             <img src="./assets/images/angle.png" alt="arrow-down">
                         </a>
+                        <ul class="drop-item pages-drop-item">
+                            <li>our galery</li>
+                            <li>coming soon</li>
+                        </ul>
 
                     </li>
-                    <li class="drop-container">
+                    <li class="nav drop-container">
                         <a class="nav-buttons House">
                             <span>House</span>
                             <img src="./assets/images/angle.png" alt="arrow-down">
                         </a>
+                        <ul class="drop-item house-drop-item">
+                            <li><a href="./apartment.html">all apartments</a></li>
+                            <li>apartments single</li>
+                        </ul>
 
                     </li>
-                    <li class="nav-btn">
+                    <li class="nav nav-btn">
                         <a href="#">About</a>
                     </li>
-                    <li class="nav-btn">
+                    <li class="nav nav-btn">
                         <a href="#">Contact</a>
                     </li>
-                </ul> -->
+                </ul>
                 <div class="site-account">
                     <ul>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                        <li class="nav">
+                            <div class="user-img">
+                                <svg class="svg-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                                </svg>
+                                <span class="user-letter"></span>
+                            </div>
+                            <ul class="user-nav-drop">
+                                <li class="dashboard"><a href="./dashboard.html"><span>Dashboard</span></a></li>
+                                <li class="Favorites"><a href="#"><span>Favorites</span></a></li>
+                                <li class="logout"><span>Sign out</span></li>
+                            </ul>
+                            <svg class="svg-user-drop" role="img" width="12" height="10" viewBox="0 0 18 10" fill="none" stroke-width="1" stroke="#555" xmlns="http://www.w3.org/2000/svg">
+                                <g><title></title><path d="M1 1L9 9L17 1" stroke="white" stroke-width="2"></path></g>
                             </svg>
-                            <a href="#">login / register</a>
+                            <a class="btn-login-register" href="#">login / register</a>
                         </li>
                     </ul>
+
                 </div>
 
             </nav>
         </header>
+        <div class="message-displayer-login">
+            <span>Login successful</span>
+        </div>
+        <div class="loading-screen">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+        </div>
+        <div class="progress-bar">
+            <div class="filled"></div>
+        </div>
 
+        <div class="login-container">
+            <div class="login-wrapper">
+                <div class="login-closer">
+                </div>
+                <div class=" login-block">
+                    <div class="login-tab-controller">
+                        <button class="active btn-login">
+                            sign in
+                        </button>
+                        <button class="btn-sign-up">
+                            new account
+                        </button>
+                    </div>
+                    <div class="login-tabs">
+                        <form class="active login-form">
+                            <p class="filed">
+                                <label for="signin-email" class="img-email"></label>
+                                <input type="email" placeholder="E-mail" id="signin-email" class="sign-in-field">
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filed">
+                                <label for="signin-password" class="img-password"></label>
+                                <input placeholder="Password" type="password" class="password-filed-login" id="signin-password">
+                                <button class="password-toggle">show</button>
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filedset-aside">
+                                <input type="checkbox" class="remember-me" id="signin-remember-check">
+                                <label for="signin-remember-check">Remember me</label>
+                            </p>
+                            <p class="filed sign-in-btn">
+                                <input class="btn-signin" type="submit" value="Login">
+                            </p>
+                            <div class="pass-forgot-filed">
+                                <a>Forgot your password?</a>
+                            </div>
+                        </form>
+                        <form class="register-form">
+                            <p class="filed">
+                                <label for="username" class="img-username"></label>
+                                <input type="text" placeholder="Username" id="username" class="register-field">
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filed">
+                                <label for="register-email" class="img-email"></label>
+                                <input type="email" placeholder="E-mail" id="register-email" class="email-field">
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filed">
+                                <label for="register-password" class="img-password"></label>
+                                <input placeholder="Password" type="password" class="password-filed-register" id="register-password">
+                                <button class="password-toggle">show</button>
+                                <span class="error-message">
+                                    Error message
+                                </span>
+                            </p>
+                            <p class="filedset-aside">
+                                <input type="checkbox" class="remember-me" id="register-remember-check">
+                                <label for="register-remember-check">I agree to the <span>Terms</span></label>
+                            </p>
+                            <p class="filed wrapper-btn-register">
+                                <input class="btn-register" type="submit" value="CREATE ACCOUNT">
+                            </p>
+                        </form>                  
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="page-scroller">
+            <i class="fa-solid fa-chevron-up"></i>
+        </div>
+        
         <section class="section-container-default section-one">
             <video class="video-slide active" src="./assets/images/Cozy - 106674.mp4" autoplay muted loop></video>
             <video class="video-slide" src="./assets/images/Fireplace - 1971.mp4" autoplay muted loop></video>
             <video class="video-slide" src="./assets/images/Live Wallpaper - 112722.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="./assets/images/Water - 3967.mp4" autoplay muted loop></video>
+            <video class="video-slide" src="./assets/images/1603987530-1-pixabay.mp4" autoplay muted loop></video>
             <div class="main-section-container flex-container">
                 <h2 class="section-one-para">
                     Good Service is our passion
@@ -73,7 +195,8 @@
                 <h1 class="landing-hero-header">
                     Awesome apartment Villa
                 </h1>
-                <p>No matter what the weather,
+                <div class="line"></div>
+                <p class="section-one-p">No matter what the weather,
                      no matter what the situation
                       we are in, if we have the right perspective
                        in life, life will always be beautiful!</p>
@@ -82,50 +205,549 @@
                 </button>
             </div>
             <div class="slider-navigation">
-                <div class="nav-btn-slide active"></div>
+                <a href="#female"><div class="nav-btn-slide active"></div></a>
+                <a href="#barchelor"><div class="nav-btn-slide"></div></a>
+                <div class="nav-btn-slide"></div>
                 <div class="nav-btn-slide"></div>
                 <div class="nav-btn-slide"></div>
             </div>
         </section>
 
-        <section class="section-container-default section-two">
-            <div class="section-wrapper-two">
-                <div class="carousel-container flex-container">
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-four.png">
-                        garage</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-ten.png" alt="">
-                        office</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-seven.png" alt="">
-                        apartment</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-one.png" alt="">
-                        family house</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-eight.png" alt="">
-                        hall room</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-nine.png" alt="">
-                        warehouse</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-three.png" alt="">
-                        sublet</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-two.png" alt="">
-                        factory</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-three.png" alt="">
-                        bachelor mess</div>
-                    <div class="boxes">
-                        <img src="./assets/images/category/category-ten.png" alt="">
-                        female mess</div>
+        <section class="section-two">
+            <div class="section-container-default section-two-container">
+                <div class="section-wrapper-two flex-container">
+                    <h2 class="section-header">we offer</h2>
+                    <div class="carousel-container">
+                        <!-- <div class="btn-navigate left-navigate">
+                            <button><img src="./assets/images/angle.png" alt=""></button>
+                        </div> -->
+                        <div class="btn-navigate left-navigate">
+                            <button class="left-marketing-btn" id="left-marketing-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="carousel-box-wrapper flex-container">
+                            <div id="garage" class="boxes">
+                                <img src="./assets/images/category/category-four.png">
+                                garage</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-ten.png" alt="">
+                                office</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-seven.png" alt="">
+                                apartment</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-one.png" alt="">
+                                family house</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-eight.png" alt="">
+                                hall room</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-nine.png" alt="">
+                                warehouse</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-three.png" alt="">
+                                sublet</div>
+                            <div class="boxes">
+                                <img src="./assets/images/category/category-two.png" alt="">
+                                factory</div>
+                            <div id="barchelor" class="boxes">
+                                <img src="./assets/images/category/category-three.png" alt="">
+                                bachelor mess</div>
+                            <div id="female" class="boxes">
+                                <img src="./assets/images/category/category-ten.png" alt="">
+                                female mess</div>
+                        </div>
+                        <div class="btn-navigate right-navigate">
+                            <button class="right-marketing-btn" id="right-marketing-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- <div class="btn-navigate right-navigate">
+                            <button><img src="./assets/images/angle.png" alt=""></button>
+                        </div> -->
+                    </div>
                 </div>
             </div>
         </section>
+
+        <section class="section-three">
+            <div class="section-container-default section-three-container">
+                <div class="section-wrapper-three flex-container">
+                    <h2 class="section-header">For rates & Availability</h2>
+                    <h2 class="section-header section-describe">search your <span>house</span></h2>
+                    <div class="section-input-sort flex-container">
+                        <div class="input-container">
+                            <h3>living area</h3>
+                            <input placeholder="Where do you want to live?" type="text" class="sorts">
+                        </div>
+                        <div class="input-container">
+                            <h3>type</h3>
+                            <select>
+                                <option value="volvo">Apartments</option>
+                                <option value="saab">Saab</option>
+                                <option value="mercedes">Single</option>
+                                <option value="audi">Audi</option>
+                            </select>
+                        </div>
+                        <div class="input-container">
+                            <h3>price</h3>
+                            <input placeholder="min" type="number" class="sorts">
+                        </div>
+                        <div class="input-container">
+                            <h3>price</h3>
+                            <input placeholder="max" type="number" class="sorts">
+                        </div>
+                        <div class="input-container">
+                            <h3>for</h3>
+                            <select>
+                                <option value="family">Family</option>
+                                <option value="student">Student</option>
+                                <option value="single">Single</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn-default-round">check availability</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-four">
+            <div class="section-container-default section-four-container">
+                <div class="section-wrapper-four">
+                    <h2 class="section-header">about us</h2> 
+                    <h2 class="section-describe section-four-describe">WELCOME TO OUR HOUSE RENT COMPANY</h2>   
+                    <div class="about-content-container flex-container">
+                        <div class="about-content about-content-nav">
+                            <ul class="nav-tabs">
+                                <li class="list active"><a>about company</a></li>
+                                <li class="list"><a>Terms & Condition</a></li>
+                                <li class="list"><a>our speciality</a></li>
+                                <li class="list"><a>our speciality</a></li>
+                            </ul>
+                        </div>
+                        <div class="about-content flex-container">
+                            <div class="tab-items-text-content active">
+                                <span>Amorem ipsum dolor sit amet,
+                                     consectetur adipiscing elit.
+                                      Cras vitae nibh nisl. Cras etitikis
+                                       mauris egeth lorem ultricies ferme
+                                        is ntum a inti diam. Morbi mollis
+                                         pellden tesque offs aiug ueia nec
+                                         rhoncus. Nam ute ultricies. Cras
+                                          etitikis mauris eget lorem ultricies
+                                           ferme ntum a inti diam. Morbi mollis
+                                            pellen tesque offs aiug ueia nec
+                                             rhoncus. Nam ute ultricies.
+                                </span>
+                                <ul>
+                                    <li>Amorem ipsum dolor sit amet, consectetur</li>
+                                    <li>Cras etitikis mauris egeth lorem ultricies</li>
+                                    <li>Amorem ipsum dolor sit amet, consectetur</li>
+                                    <li>Cras etitikis mauris egeth lorem ultricies</li>
+                                    <li>Amorem ipsum dolor sit amet, consectetur</li>
+                                    <li>Cras etitikis mauris egeth lorem ultricies</li>
+                                </ul>
+                            </div>
+                            <div class="about-content-img">
+                                <img src="./assets/images/about-image.png" alt="house image">
+                            </div>
+                        </div>
+                    </div>         
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="section-five"></section> -->
+        <section class="rooms-and-appartments">
+            <div class="rooms-container">
+                <div class="banner-and-description">
+                    <h1 class="banner section-header">Rooms & Apartments</h1>
+                    <p class="description">FIND YOUR ROOMS, FOR YOUR ABAILITY</p>
+                </div>
+                <div class="family-appartment list">
+                    <div class="list-item">
+                        <div class="appartment-photo">
+                            <img src="./assets/images/apartment/apartment-one.png" alt="">
+                        </div>
+                        <div class="below-wrapper">
+                            <div class="upper-wrapper">
+                                <h1 class="family-heading">Family Apartment</h1>
+                                <p class="heading-description">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Dhanmondi, Dhaka</span>
+                                </p>
+                            </div>
+                            <div class="down-wrapper">
+                                <div class="two-para">
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bed"></i>
+                                        <span> 3 Bedrooms</span>
+                                    </p>
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bath"></i>
+                                        <span> 2 Bathroom</span>
+                                    </p>
+                                </div>
+                                <div class="h1-and-icons">
+                                    <h1>&dollar;200</h1>
+                                    <p class="icons">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="appartment-photo">
+                            <img src="./assets/images/apartment/apartment-two.png" alt="">
+                        </div>
+                        <div class="below-wrapper">
+                            <div class="upper-wrapper">
+                                <h1 class="family-heading">Family Apartment</h1>
+                                <p class="heading-description">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Dhanmondi, Dhaka</span>
+                                </p>
+                            </div>
+                            <div class="down-wrapper">
+                                <div class="two-para">
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bed"></i>
+                                        <span> 3 Bedrooms</span>
+                                    </p>
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bath"></i>
+                                        <span> 2 Bathroom</span>
+                                    </p>
+                                </div>
+                                <div class="h1-and-icons">
+                                    <h1>&dollar;200</h1>
+                                    <p class="icons">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="appartment-photo">
+                            <img src="./assets/images/apartment/apartment-three.png" alt="">
+                        </div>
+                        <div class="below-wrapper">
+                            <div class="upper-wrapper">
+                                <h1 class="family-heading">Family Apartment</h1>
+                                <p class="heading-description">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Dhanmondi, Dhaka</span>
+                                </p>
+                            </div>
+                            <div class="down-wrapper">
+                                <div class="two-para">
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bed"></i>
+                                        <span> 3 Bedrooms</span>
+                                    </p>
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bath"></i>
+                                        <span> 2 Bathroom</span>
+                                    </p>
+                                </div>
+                                <div class="h1-and-icons">
+                                    <h1>&dollar;200</h1>
+                                    <p class="icons">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="appartment-photo">
+                            <img src="./assets/images/apartment/apartment-four.png" alt="">
+                        </div>
+                        <div class="below-wrapper">
+                            <div class="upper-wrapper">
+                                <h1 class="family-heading">Family Apartment</h1>
+                                <p class="heading-description">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Dhanmondi, Dhaka</span>
+                                </p>
+                            </div>
+                            <div class="down-wrapper">
+                                <div class="two-para">
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bed"></i>
+                                        <span> 3 Bedrooms</span>
+                                    </p>
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bath"></i>
+                                        <span> 2 Bathroom</span>
+                                    </p>
+                                </div>
+                                <div class="h1-and-icons">
+                                    <h1>&dollar;200</h1>
+                                    <p class="icons">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="appartment-photo">
+                            <img src="./assets/images/apartment/apartment-five.png" alt="">
+                        </div>
+                        <div class="below-wrapper">
+                            <div class="upper-wrapper">
+                                <h1 class="family-heading">Family Apartment</h1>
+                                <p class="heading-description">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Dhanmondi, Dhaka</span>
+                                </p>
+                            </div>
+                            <div class="down-wrapper">
+                                <div class="two-para">
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bed"></i>
+                                        <span> 3 Bedrooms</span>
+                                    </p>
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bath"></i>
+                                        <span> 2 Bathroom</span>
+                                    </p>
+                                </div>
+                                <div class="h1-and-icons">
+                                    <h1>&dollar;200</h1>
+                                    <p class="icons">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="appartment-photo">
+                            <img src="./assets/images/apartment/apartment-six.png" alt="">
+                        </div>
+                        <div class="below-wrapper">
+                            <div class="upper-wrapper">
+                                <h1 class="family-heading">Family Apartment</h1>
+                                <p class="heading-description">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Dhanmondi, Dhaka</span>
+                                </p>
+                            </div>
+                            <div class="down-wrapper">
+                                <div class="two-para">
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bed"></i>
+                                        <span> 3 Bedrooms</span>
+                                    </p>
+                                    <p class="bedrooms">
+                                        <i class="fa-solid fa-bath"></i>
+                                        <span> 2 Bathroom</span>
+                                    </p>
+                                </div>
+                                <div class="h1-and-icons">
+                                    <h1>&dollar;200</h1>
+                                    <p class="icons">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-six counter-section">
+            <div class="section-counter-wrapper flex-container">
+                <div class="clients">
+                    <h3>2500</h3>
+                    <div>Clients</div>
+                </div>
+                <div class="booking">
+                    <h3>3055</h3>
+                    <div>booking</div>
+                </div>
+                <div class="swimming">
+                    <h3>50</h3>
+                    <div>swimming</div>
+                </div>
+                <div class="apartment">
+                    <h3>1530</h3>
+                    <div>apartment</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-block section-five gallery">
+            <ul class="photo-gallery">
+                <li class="image-list">
+                    <img src="./assets/images/gallery/gallery-one.png" alt="">
+                </li>
+                <li class="image-list">
+                    <img src="./assets/images/gallery/gallery-two.png" alt="">
+                </li>
+                <li class="image-list">
+                    <img src="./assets/images/gallery/gallery-three.png" alt="">
+                </li>
+                <li class="image-list">
+                    <img src="./assets/images/gallery/gallery-four.png" alt="">
+                </li>
+                <li class="image-list">
+                    <img src="./assets/images/gallery/gallery-five.png" alt="">
+                </li>
+                <li class="image-list">
+                    <img src="./assets/images/gallery/gallery-six.png" alt="">
+                </li>
+            </ul>
+            <div class="gallery-right-hand">
+                <h1 class="gallery-heading">Our <br> Photo Gallery</h1>
+                <h3>Best of our <br> Event portfolio Photos</h3>
+                <p class="gallery-description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente eligendi molestias nisi
+                     culpa sit hic sint, tempora asperiores. Molestiae 
+                    earum vitae dicta culpa omnis esse at quia, odio corrupti repudiandae?
+                </p>
+                <button class="all-photos">All Photos and Videos</button>
+            </div>
+        </section>
+
+        <section class="container-block section-seven contact">
+            <div class="background-image">
+                <div class="background-color">
+                    <div class="contact-list">
+                        <p>
+                            Do you want to Rent your House  <br><span>Call us and list your property here</span>
+                        </p>
+                        <div class="email-phone-num">
+                            <p class="phone-num"><a href="tel:+237 6 74 51 18 16">+237 6 74 51 18 16</a></p>
+                            <p class="email"><a href="mailto:company@gmail.com">company@gmail.com</a></p>
+                            <button type="button">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-block blog-post">
+            <h1 class="banner">Our Blog Post</h1>
+            <p class="heading-description">OUR NEWS FEED</p>
+            <div class="blog-holder">
+                <div class="best-places-to-visit">
+                    <div class="photo">
+                        <img src="./assets/images/blog/blog-one.png" alt="">
+                    </div>
+                    <div class="h1-ul-p">
+                        <p class="date-and-type">July 25, 2016  <span><a href="#">Rooms & Suites</a></span></p>
+                        <h1>Finding best places to visit in California</h1>
+                        <ul class="social-views">
+                            <li class="list-item">
+                                <i class="fa-solid fa-eye"></i> 35
+                            </li>
+                            <li class="list-item"><i class="fa-regular fa-heart"></i> 9</li>
+                            <li class="list-item"><i class="fa-solid fa-message"></i> 05</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="best-places-to-visit">
+                    <div class="photo">
+                        <img src="./assets/images/blog/blog-two.png" alt="">
+                    </div>
+                    <div class="h1-ul-p">
+                        <p class="date-and-type">July 25, 2016  <span><a href="#">Rooms & Suites</a></span></p>
+                        <h1>Finding best places to visit in California</h1>
+                        <ul class="social-views">
+                            <li class="list-item">
+                                <i class="fa-solid fa-eye"></i> 35
+                            </li>
+                            <li class="list-item"><i class="fa-regular fa-heart"></i> 9</li>
+                            <li class="list-item"><i class="fa-solid fa-message"></i> 05</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="best-places-to-visit">
+                    <div class="photo">
+                        <img src="./assets/images/blog/blog-three.png" alt="">
+                    </div>
+                    <div class="h1-ul-p">
+                        <p class="date-and-type">July 25, 2016  <span><a href="#">Rooms & Suites</a></span></p>
+                        <h1>Finding best places to visit in California</h1>
+                        <ul class="social-views">
+                            <li class="list-item">
+                                <i class="fa-solid fa-eye"></i> 35
+                            </li>
+                            <li class="list-item"><i class="fa-regular fa-heart"></i> 9</li>
+                            <li class="list-item"><i class="fa-solid fa-message"></i> 05</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button type="button">Show All</button>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-wrapper flex-container">
+                    <div class="footer-item-top flex-container">
+                        <div class="footer-first">
+                            <h2 class="footer-header footer-header-one">About House Rent</h2>
+                            <img src="./assets/images/footer-logo.png" alt="house logo">
+                            <p>We Provide Premium Word Press, Ghost and HTML template.
+                                 Our Perm tritium Templates is, develop gaped in a way
+                                  so that the clients find Support. Themes are developed
+                                   in a way so that the clients find.
+                            </p>
+                            <button class="square-btn">More</button>
+                        </div>
+                        <div class="footer-second">
+                            <h2 class="footer-header footer-header-two">Place Category</h2>
+                            <ul>
+                                <li>Flat for Rent <span>Francis</span></li>
+                                <li>Flat for Rent <span>Collins St</span></li>
+                                <li>Flat for Rent <span>Rose Ln</span></li>
+                                <li>Flat for Rent <span>Cosgrave Ln</span></li>
+                                <li>Flat for Rent <span>Bourke St</span></li>
+                                <li>Flat for Rent <span>Flienders Ln</span></li>
+                                
+                            </ul>
+                        </div>
+                        <div class="footer-last">
+                            <h2 class="footer-header footer-header-three">Instagram Image</h2>
+                            <ul>
+                                <li><img src="./assets/images/instagram/instagram-one.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-two.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-three.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-four.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-five.png" alt=""></li>
+                                <li><img src="./assets/images/instagram/instagram-six.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-item-bottom">
+                        <h3>Copyright &copy2023 <span>Treasure.Co</span></h3>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/register.js"></script>
+    <script src="./scripts/logout.js"></script>
 </body>
 </html>

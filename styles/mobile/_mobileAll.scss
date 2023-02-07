@@ -1,0 +1,296 @@
+/**HEADER MOBILE **/
+
+.drop-container {
+
+    .drop-item { 
+
+        position: initial !important;
+        clip-path: circle(150% at 0 50%) !important;
+        visibility: visible !important;
+        height: 0px !important;
+        // background: red !important;
+        display: none !important;
+
+    }
+
+    &:hover .drop-item {
+        display: block !important;
+    }
+}
+
+.nav-items {
+    // display: none !important;
+    position: fixed;
+    // left: 100vw;
+    // display: block !important;
+    // position: fixed !important;
+    top: 0;
+    left: 100vw;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: 9000;
+    padding-top: 40px;
+    transition: all 0.5s ease;
+
+    li {
+        display: block;
+        width: 100%;
+        color: black !important;
+        a {
+            color: black !important;
+        }
+    }
+    i {
+        color: black !important;
+        position: absolute;
+        right: 23px;
+        top: 15px;
+        padding: 0 !important;
+        &:hover {
+            color: $color-green !important;
+        }
+    }
+
+
+
+    &.active {
+        left: 0;
+        
+
+    }
+}
+
+
+// .nav-items.active 
+
+
+
+// }
+
+.nav-container {
+    // justify-content: ;
+    padding: 1rem 1.5rem;
+    align-items: center;
+
+    i {
+        display: block;
+    }
+
+
+    .header-logo { 
+        margin-bottom: 0.8rem;
+    }
+}
+
+
+
+
+/**SECTION ONE **/
+
+.landing-hero-header {
+    font-size: 45px !important;
+}
+
+.section-one-p {
+    display: none;
+}
+
+.line {
+    margin-bottom: 5rem;
+}
+
+
+
+/** FOR RATES AND AVAILABILITY***///
+
+.section-input-sort {
+    flex-direction: column;
+
+    .input-container {
+        padding-top: 2rem;
+
+        h3 {
+            text-align: left;
+        }
+
+        input {
+            // width: 100% !important;
+            width: 80vw !important;
+        }
+
+    }
+
+    .input-container > select {
+        width: 80vw !important;
+    }
+}
+
+
+/**ABOUT US SECTION*/
+
+.about-content-nav {
+    display: none;
+}
+
+.about-content {
+    flex-direction: column;
+
+    .about-content-img {
+        align-self: center;
+    }
+}
+
+
+
+/**ROOMS AND APARTMENTS SECTION **/
+
+
+div.family-appartment {
+    margin: 0 !important;
+    width: 100% !important;
+    justify-content: center !important;
+
+
+
+    div.list-item {
+
+        min-width: 45% !important;
+        margin-top: 0.8rem !important;
+        margin-bottom: 0.8 !important;
+    }
+
+
+}
+
+
+
+/***  SECTION COUNTER ***/
+
+.section-counter-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    h3 {
+        font-size: 4rem;
+    }
+
+    div {
+
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+
+/**** PHOTO GALLERY **////
+
+.section-five {
+    flex-direction: column;
+    padding: 1rem 1rem !important;
+
+    ul.photo-gallery { 
+        grid-template-columns: auto auto !important;
+    }
+
+    div.gallery-right-hand { 
+        width: 100% !important;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+
+        button {
+            width: 60vw;
+            // white-space: nowrap;
+            align-self: center;
+            font-size: 3vw !important;
+        }
+    }
+}
+
+
+/*** CONTACT *////
+div.background-image {
+
+    div.contact-list{ 
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        height: 100% !important;
+        gap: 3rem !important;
+
+        p { 
+            font-size: 2.5rem !important;
+        }
+    }
+}
+
+
+
+/*** OUR BLOG POST ****/
+
+section.blog-post {
+    display: flex;
+    flex-direction: column;
+
+    div.blog-holder {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        flex-wrap: wrap !important;
+        justify-content: center;
+
+        div.best-places-to-visit { 
+            width: 48% !important;
+            margin-top: 2rem !important;
+        }
+    }
+
+    button { 
+        margin: 0 !important;
+        width: 50vw;
+        align-self: center;
+        justify-self: center;
+        margin-top: 3rem !important;
+    }
+
+}
+
+
+
+
+/***FOOTER ***/
+
+footer { 
+
+    .footer-container { 
+
+        .footer-wrapper { 
+
+            .footer-item-top { 
+                flex-direction: column;
+                gap: 2rem !important;
+
+                div { 
+                    width: 100%;
+                }
+
+                .footer-last { 
+
+                    width: 100%;
+                }
+
+            }
+
+        }
+    }
+}
+
+
+
+
+

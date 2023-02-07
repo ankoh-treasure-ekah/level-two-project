@@ -1,4 +1,22 @@
 @import "_reset";
 @import "_variables";
+@import "_mixins";
 @import "_header";
+@import "./dashboard/_header";
+@import "./apartment/_header";
+@import "./apartment/_body";
 @import "_section2";
+@import "_section3";
+@import "_section4";
+@import "_rooms-and-appartments";
+@import "_photo_gallery";
+@import "_section6";
+@import "_section7";
+@import "_blog-post";
+@import "_footer";
+
+
+
+@media (max-width: 630px) {
+    @import "./mobile/_mobileAll";
+}
